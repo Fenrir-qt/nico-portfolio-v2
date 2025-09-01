@@ -81,7 +81,7 @@ export default function Navbar() {
             <span className="mr-2 xl:mr-30 cursor-pointer">
               <ToggleDark className="z-101" />
             </span>
-            <button className=" xl:hidden duration-200" onClick={toggleMenu}>
+            <button className=" xl:hidden duration-200" onClick={toggleMenu} aria-label="menu-toggle">
               {isMenuOpen ? (
                 <RxCross1 className="text-lg" />
               ) : (
