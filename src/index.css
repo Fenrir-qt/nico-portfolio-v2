@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@theme {
+  --breakpoint-lg: 1024px;
+  --color-primary: oklch(0.6 0.3 200);
+  
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Merriweather", Georgia, serif;
+  --font-mono: "Fira Code", monospace;
+}
+
+@variant dark (&:is(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
