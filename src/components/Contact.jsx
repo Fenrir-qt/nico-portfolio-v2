@@ -2,7 +2,7 @@ import Section from "./SectionSpacing";
 import { Icons } from "./Icons";
 import { motion } from "framer-motion";
 import { container, card } from './animation/StaggerAnimationY'
-import Vector from "../assets/vector.png";
+import Vector from "../assets/vector.webp";
 
 export default function Contact() {
   const ContactList = [

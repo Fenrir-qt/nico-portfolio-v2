@@ -1,5 +1,5 @@
 import { Typewriter } from "react-simple-typewriter"
-import Me from "../assets/Nico.jpg";
+import Me from "../assets/Nico.webp";
 import CV from "../assets/Burog_Nico_Angelo_Resume.pdf"
 import { motion } from "framer-motion"
 import { FaArrowAltCircleDown } from "react-icons/fa"
