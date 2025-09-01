@@ -1,6 +1,7 @@
-import { motion } from "framer-motion"
-import { Icons } from "./Icons.js"
-import Section from "./SectionSpacing.jsx"
+import { motion } from "framer-motion";
+import { Icons } from "./Icons.js";
+import { container, card } from "./animation/StaggerAnimationY.js";
+import Section from "./SectionSpacing.jsx";
 
 export default function Projects() {
   const Projects = [
@@ -51,20 +52,6 @@ export default function Projects() {
     },
   ];
 
-  const container = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const card = {
-    hidden: { opacity: 0, y: 100 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-  };
-
   return (
     <>
       <Section
@@ -89,7 +76,7 @@ export default function Projects() {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once:true }}
+          viewport={{ once: true, amount: 0.25  }}
           className="max-w-xs md:max-w-175 xl:max-w-5xl mx-auto w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8 mt-12 z-10"
         >
           {Projects.map((project, index) => {
@@ -97,15 +84,14 @@ export default function Projects() {
               <motion.div
                 key={index}
                 variants={card}
-                className="group bg-slate-50 backdrop-blur-3xl dark:bg-zinc-800 dark:text-white
-                   rounded-2xl shadow-md hover:shadow-xl 
-                   transition-all duration-300 
-                   p-6 flex flex-col justify-between border border-transparent 
-                   hover:border-blue-500 hover:scale-110 cursor-pointer"
+                whileHover={{ scale: 1.05, borderColor: "#3b82f6" }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="motion-smooth group bg-slate-50 dark:bg-zinc-800 dark:text-white
+                rounded-2xl p-6 flex flex-col justify-between border border-transparent cursor-pointer shadow-md"
               >
                 <h3
                   className="text-xl font-semibold text-gray-900 dark:text-white mb-3 
-                       group-hover:text-blue-500 dark:group-hover:text-blue-500 transition-colors"
+                 group-hover:text-blue-500 dark:group-hover:text-blue-500"
                 >
                   {project.title}
                 </h3>
@@ -138,7 +124,7 @@ export default function Projects() {
                      hover:shadow-lg hover:scale-105 
                      transition-all duration-300 flex justify-center items-center gap-1"
                     >
-                      Live Link <Icons.CiLink className="text-xl"/>
+                      Live Link <Icons.CiLink className="text-xl" />
                     </a>
                   )}
                   {project.github && (
@@ -148,8 +134,8 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="mt-6 self-start px-4 py-2 text-sm font-medium 
                      text-white bg-zinc-800 dark:bg-zinc-700 rounded-lg shadow 
-                     hover:shadow-lg hover:scale-105 
-                     transition-all duration-300 flex justify-center items-center gap-1"
+                       hover:shadow-lg hover:scale-105 
+                       transition-all duration-300 flex justify-center items-center gap-1"
                     >
                       Github
                       <Icons.FaGithub />

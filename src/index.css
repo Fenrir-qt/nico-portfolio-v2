@@ -19,3 +19,10 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+@layer utilities {
+  .motion-smooth {
+    transform: translateZ(0);
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+  }
+}

@@ -1,8 +1,8 @@
 import Section from "./SectionSpacing";
 import { Icons } from "./Icons";
 import { motion } from "framer-motion";
-import { container, card } from './animation/StaggerAnimationY'
-import Vector from "../assets/vector.webp";
+import { container, card } from "./animation/StaggerAnimationY";
+import Vector from "../assets/vector.png";
 
 export default function Contact() {
   const ContactList = [
@@ -59,18 +59,19 @@ export default function Contact() {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.3 }}
           className="max-w-xs md:max-w-175 xl:max-w-5xl mx-auto w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 z-10"
         >
           {ContactList.map((contact, index) => {
             const Icon = Icons[contact.icon];
             return (
               <motion.div
+                whileHover={{ scale: 1.05, borderColor: "#3b82f6" }}
+                transition={{ type: "spring", stiffness: 300 }}
                 key={index}
                 variants={card}
                 className="group max-w-xs md:max-w-175 xl:max-w-5xl w-full mx-auto grid grid-cols-1  
-                 bg-slate-50 rounded-xl p-5 dark:bg-zinc-800 duration-300 
-                 hover:scale-110 hover:border-blue-500 border border-transparent 
+                 bg-slate-50 rounded-xl p-5 dark:bg-zinc-800 border border-transparent 
                  cursor-pointer backdrop-blur-xl shadow-md"
               >
                 <a

@@ -51,16 +51,18 @@ export default function Certificates() {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.25  }}
           className="max-w-xs md:max-w-175 xl:max-w-5xl mx-auto w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4"
         >
           {Certs.map((certificate, index) => (
             <motion.div
+              whileHover={{ scale: 1.05, borderColor: "#3b82f6" }}
+              transition={{ type: "spring", stiffness: 300 }}
               key={index}
               variants={card}
-              className="group bg-slate-50 rounded-xl p-5   dark:bg-zinc-800 duration-300 
-                 hover:scale-110 hover:border-blue-500 border border-transparent 
-                 cursor-pointer backdrop-blur-xl shadow-md"
+              className="motion-smooth group bg-slate-50 rounded-xl p-5 dark:bg-zinc-800
+                 border border-transparent 
+                 cursor-pointer backdrop-blur-xl"
             >
               <div className="flex flex-col">
                 <h3
