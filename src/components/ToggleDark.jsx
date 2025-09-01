@@ -22,6 +22,7 @@ export default function ToggleDark() {
       onClick={() => setDark(!dark)}
       className={`relative w-14 h-8 flex items-center rounded-full p-1 transition-colors cursor-pointer
         ${dark ? "bg-violet-600" : "bg-gray-400"}`}
+      aria-label="dark-mode-toggle"
     >
       <div
         className={`w-6 h-6 flex items-center justify-center rounded-full bg-white shadow-md transition-transform duration-300 ease-in-out
