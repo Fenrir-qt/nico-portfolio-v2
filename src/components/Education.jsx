@@ -1,4 +1,4 @@
-import BSU from "../assets/bsu_logo.png";
+import BSU from "../assets/bsu_logo.webp";
 import Section from "./SectionSpacing";
 import { container, card } from "./animation/StaggerAnimationX.js";
 import { motion } from "framer-motion";

@@ -2,7 +2,7 @@ import Section from "./SectionSpacing";
 import { Icons } from "./Icons";
 import { motion } from "framer-motion";
 import { container, card } from "./animation/StaggerAnimationY";
-import Vector from "../assets/vector.png";
+import Vector from "../assets/vector.webp";
 
 export default function Contact() {
   const ContactList = [
@@ -15,20 +15,6 @@ export default function Contact() {
     },
     { icon: "SiGmail", name: "Gmail", link: "mailto:fenrirqtpie@gmail.com" },
   ];
-
-  const container = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const card = {
-    hidden: { opacity: 0, y: 100 },
-    show: { opacity: 1, y: 0, transition: { ease: "easeOut" } },
-  };
 
   return (
     <>
