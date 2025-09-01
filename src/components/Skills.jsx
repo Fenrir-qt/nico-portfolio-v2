@@ -1,9 +1,8 @@
-import { motion } from "framer-motion"
-import { Icons } from './Icons.js'
-import { container, card } from './animation/StaggerAnimationY.js'
-import Section from "./SectionSpacing.jsx"
+import { motion } from "framer-motion";
+import { Icons } from "./Icons.js";
+import { container, card } from "./animation/StaggerAnimationY.js";
+import Section from "./SectionSpacing.jsx";
 export default function Skills() {
-
   const Skill = [
     { icon: "FaHtml5", name: "HTML", style: "text-orange-500" },
     { icon: "FaCss3Alt", name: "CSS", style: "text-blue-500" },
@@ -12,7 +11,7 @@ export default function Skills() {
     { icon: "SiExpress", name: "ExpressJS" },
     { icon: "FaNode", name: "NodeJS", style: "text-lime-600" },
     { icon: "FaFigma", name: "Figma" },
-    { icon: "GrMysql", name: "MySQL"},
+    { icon: "GrMysql", name: "MySQL" },
     { icon: "FaGithub", name: "Github" },
     { icon: "FaGitAlt", name: "Git", style: "text-orange-600" },
   ];
@@ -48,22 +47,19 @@ export default function Skills() {
             const Icon = Icons[skills.icon];
 
             return (
-              <motion.div
-                key={index}
-                variants={card}
-              >
-              <span
-                key={index}
-                className="flex flex-col items-center justify-center md:gap-3 
+              <motion.div key={index} variants={card}>
+                <span
+                  key={index}
+                  className="flex flex-col items-center justify-center md:gap-3 
                      bg-slate-50 dark:bg-zinc-800 
                      text-gray-800 dark:text-gray-200 
-                     shadow-md hover:shadow-lg 
+                     shadow-md backdrop-blur-xl
                      hover:scale-105 transition-all duration-300 
                      rounded-2xl p-6"
-              >
-                {Icon && <Icon size={36} className={skills.style}/>}
-                <span className="text-sm font-medium">{skills.name}</span>
-              </span>
+                >
+                  {Icon && <Icon size={36} className={skills.style} />}
+                  <span className="text-sm font-medium">{skills.name}</span>
+                </span>
               </motion.div>
             );
           })}
