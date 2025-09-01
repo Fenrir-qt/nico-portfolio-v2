@@ -64,7 +64,7 @@ export default function Education() {
              border border-transparent cursor-pointer shadow-md"
             >
               <div className="flex items-center z-10">
-                <img src={education.icon} alt="" className="w-10 h-10" />
+                <img src={education.icon} alt="" className="w-10 h-full" />
                 <div className="flex flex-col mx-5">
                   <h3
                     className="text-md xl:text-xl text-black dark:text-white font-semibold 
