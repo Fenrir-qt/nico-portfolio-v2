@@ -35,8 +35,8 @@ export default function Hero() {
             with security one project at a time.
           </p>
           <div className="flex gap-2">
-            <button className="mt-5 px-4 md:px-5 py-3 rounded-full bg-blue-500 text-white hover:bg-blue-600 duration-200 cursor-pointer z-10 flex items-center gap-1.5">
-              <a href={CV} className=" text-sm md:text-base" download>
+            <button className="mt-5 px-4 md:px-5 py-4 xl:py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 duration-200 cursor-pointer z-10 flex items-center gap-1.5">
+              <a href={CV} className="text-base" download>
                 Download CV{" "}
               </a>
               <FaArrowAltCircleDown />
