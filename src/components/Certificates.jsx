@@ -81,7 +81,7 @@ export default function Certificates() {
               onClick={() => showCert(certificate)}
               className="motion-smooth group bg-slate-50 rounded-xl p-5 dark:bg-zinc-800
                  border border-transparent 
-                 cursor-pointer backdrop-blur-xl"
+                 cursor-pointer backdrop-blur-xl shadow-md"
             >
               <div className="flex flex-col">
                 <h3
