@@ -50,6 +50,13 @@ export default function Projects() {
         "text-black dark:text-white",
       ],
     },
+    {
+      title: "Maskerade",
+      description: "A comprehensive network analysis tool that supports both IPv4 and IPv6 networks. Calculate network information, generate host lists, perform subnet calculations, and export results to CSV files.",
+      github: "https://github.com/Fenrir-qt/Maskerade",
+      icons: ["FaPython"],
+      iconsStyle: ["text-[#306998]"]
+    }
   ];
 
   return (
