@@ -6,12 +6,15 @@ export default function Skills() {
   const Skill = [
     { icon: "FaHtml5", name: "HTML", style: "text-orange-500" },
     { icon: "FaCss3Alt", name: "CSS", style: "text-blue-500" },
+    { icon: "DiJavascript", name: "Javascript", style: "text-yellow-500" },
     { icon: "RiTailwindCssFill", name: "Tailwind", style: "text-primary" },
     { icon: "SiArduino", name: "Arduino", style: "text-primary" },
+    { icon: "FaReact", name: "React", style: "text-primary"},
     { icon: "SiExpress", name: "ExpressJS" },
     { icon: "FaNode", name: "NodeJS", style: "text-lime-600" },
     { icon: "FaFigma", name: "Figma" },
     { icon: "GrMysql", name: "MySQL" },
+    { icon: "DiPostgresql", name: "PostgreSQL" },
     { icon: "FaGithub", name: "Github" },
     { icon: "FaGitAlt", name: "Git", style: "text-orange-600" },
   ];
