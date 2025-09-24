@@ -2,6 +2,10 @@ import Section from "./SectionSpacing";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { container, card } from "./animation/EaseStagger";
+import CloudArchitecting from "../assets/aws_cloud_architecting.png"
+import CiscoENSA from "../assets/cisco_ensa.png"
+import CloudSecFoundation from "../assets/aws_cloud_security_foundations.png"
+import CloudFoundation from "../assets/aws_cloud_foundations.png"
 import PythonDev from "../assets/python.png";
 import NetskopeAdmin from "../assets/netskope.png";
 import ISC2 from "../assets/isc2.png";
@@ -21,6 +25,30 @@ export default function Certificates() {
       issuer: "CICS",
       name: "Dean's Lister (3rd Year - 4th Year)",
       date: "AY 2023 - 2025",
+    },
+    {
+      issuer: "Cisco",
+      name: "CCNA: Enterprise, Networking, Security, & Automation",
+      date: "February, 2024",
+      image: CiscoENSA
+    },
+    {
+      issuer: "Amazon Web Services",
+      name: "AWS Cloud Architecting",
+      date: "April, 2025",
+      image: CloudArchitecting
+    },
+    {
+      issuer: "Amazon Web Services",
+      name: "AWS Cloud Foundations",
+      date: "April, 2025",
+      image: CloudFoundation
+    },
+    {
+      issuer: "Amazon Web Services",
+      name: "AWS Cloud Security Foundations",
+      date: "April, 2025",
+      image: CloudSecFoundation
     },
     {
       issuer: "Netskope",
