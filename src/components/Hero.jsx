@@ -1,6 +1,5 @@
 import { Typewriter } from "react-simple-typewriter"
 import Me from "../assets/Nico.webp";
-import CV from "../assets/Burog_Nico_Angelo_Resume.pdf"
 import { motion } from "framer-motion"
 import { FaArrowAltCircleDown } from "react-icons/fa"
 export default function Hero() {
@@ -35,7 +34,7 @@ export default function Hero() {
             with security one project at a time.
           </p>
           <div className="flex gap-2">
-            <a href={CV} className="text-sm md:text-base font-medium z-10" download>
+            <a href="Burog, Nico Angelo - Resume.pdf" className="text-sm md:text-base font-medium z-10" download>
             <button className="mt-5 px-5 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 duration-200 cursor-pointer z-10 flex items-center gap-1.5" aria-label="download-cv-button">
                 Download CV{" "}
               <FaArrowAltCircleDown />
